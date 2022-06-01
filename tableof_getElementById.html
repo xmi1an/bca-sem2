@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <input id="mynum" type="text"><br><br>
+    <button onclick="getTable()">Find</button>
+    <hr>
+    <div id="result"></div>
+    <script>
+        function getTable() {
+            var num = document.getElementById('mynum').value;
+            for (i = 1; i <= 10; i++) {
+                res = i * num
+                document.getElementById('result').innerHTML += `${num} x ${i} = ${res} <br>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

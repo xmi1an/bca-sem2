@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<style>
+    input {
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <div style="margin: auto; width: 400px;">
+        <h1>Email Registration Form</h1>
+        <form onsubmit="event.preventDefault(); alert('Success')">
+            <input id="userName" type="text" placeholder="Enter Your Name" required>
+            <br>
+            <input id="userMobile" type="number" placeholder="Enter Mobile Number" required>
+            <br>
+            <input id="userEmail" type="email" placeholder="Enter Email" required>
+            <br>
+            <input id="userPass" type="password" placeholder="Enter Password" required>
+            <br>
+            <select>
+                <option value=""></option>
+            </select>
+            <button type="submit" onclick="getData()">Submit</button>
+
+        </form>
+        <span id="showName"></span> <br>
+        <span id="showMobile"></span> <br>
+        <span id="showEmail"></span> <br>
+        <span id="showPass"></span> <br>
+    </div>
+    <script>
+        function getData() {
+            var name = document.getElementById('userName').value;
+            var mobile = document.getElementById('userMobile').value;
+            var email = document.getElementById('userEmail').value;
+            var pass = document.getElementById('userPass').value;
+
+            document.getElementById('showName').innerHTML = name
+            document.getElementById('showMobile').innerHTML = mobile
+            document.getElementById('showEmail').innerHTML = email
+            document.getElementById('showPass').innerHTML = pass
+        }
+    </script>
+</body>
+
+</html>

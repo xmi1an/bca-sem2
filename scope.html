@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var state = "GJ" // Global Variable
+
+        function getName() {
+            var city = "Idar" // Local Variable
+            console.log(state) // accessible
+            console.log(city) // accessible  
+        }
+
+        console.log(state); // accessible
+        getName()
+        console.log(city); // Not accessible
+    </script>
+</body>
+
+</html>
