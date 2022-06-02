@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <input type="number" id="first" placeholder="Enter First Value">
+    <br><br>
+
+    <select id="opr">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <br><br>
+    <input type="number" id="second" placeholder="Enter Second Value">
+    <br><br>
+    <input type="text" id="result" placeholder="Result" readonly>
+    <br><br>
+    <button onclick="cal()">=</button>
+
+    <script>
+        function cal() {
+            var val1 = document.getElementById('first').value;
+            var val2 = document.getElementById('second').value;
+            var opr = document.getElementById('opr').value;
+            console.log(opr);
+
+            if (opr == '+') {
+                var res = parseInt(val1) + parseInt(val2)
+                document.getElementById('result').value = res
+            } else if (opr == '-') {
+                var res = parseInt(val1) - parseInt(val2)
+                document.getElementById('result').value = res
+            } else if (opr == '*') {
+                var res = parseInt(val1) * parseInt(val2)
+                document.getElementById('result').value = res
+            } else if (opr == '/') {
+                var res = parseInt(val1) / parseInt(val2)
+                document.getElementById('result').value = res
+            }
+        }
+    </script>
+</body>
+
+</html>
